@@ -2,9 +2,13 @@
   text-align: center;
 }
 
-.header-container {
+.header-container { 
   width: 1280px;
   height: 832px;
+  /* top: -416px;
+  left: -1960px; */
+  gap: 0px;
+  opacity: 0px;
   position: relative;
   margin: 0 auto; 
   border: 5px solid black;
@@ -20,6 +24,14 @@ header {
   left: 125px;
   width: 1256px;
   height: 750px;
+  /*width: 1256px;
+height: 781px;
+top: 36px;
+left: 12px;
+gap: 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px; */
+
   text-align: left;
   border: 1px solid #fff; /* White border on all four sides */
   /* border-radius: 20px;  */
@@ -33,8 +45,8 @@ header {
   background-color:  #9B9B9B;
   margin-top: 20px;
   position: absolute;
-  Width :1211px ;
-  Height :692px ;
+  Width :1200px ;
+  Height :650px ;
   Border:1px ;
   top:53%;
   left:59%;
