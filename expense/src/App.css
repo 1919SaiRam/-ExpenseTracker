@@ -1,0 +1,172 @@
+.App {
+  text-align: center;
+}
+
+.header-container {
+  width: 1280px;
+  height: 832px;
+  position: relative;
+  margin: 0 auto; 
+  border: 5px solid black;
+
+}
+
+header {
+  background-color: #3B3B3B;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+  top: 26px;
+  left: 125px;
+  width: 1256px;
+  height: 750px;
+  text-align: left;
+  border: 1px solid #fff; /* White border on all four sides */
+  /* border-radius: 20px;  */
+}
+
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color:  #9B9B9B;
+  margin-top: 20px;
+  position: absolute;
+  Width :1211px ;
+  Height :692px ;
+  Border:1px ;
+  top:53%;
+  left:59%;
+  transform: translate(-50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+
+.red{
+  background-color: red;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.green {
+  background-color: green;
+}
+
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+  height: 269px;
+  top: 250px;
+  left: 32px;
+  gap: 0px;
+  border: 1px solid #ccc;
+  border-radius: 10px ;
+  opacity: 0px;
+  background-color: #626262 ;
+  padding: 10px; /* Add padding to create space between border and inner elements */
+}
+
+.wallet-info {
+  width: 355.41px;
+  height: 181px;
+  border-radius: 15px;
+  opacity: 0px;
+  top: 140;
+  background-color: #9B9B9B ;
+}
+
+.expense-info{
+  width: 355.41px;
+  height: 181px;
+  border-radius: 15px;
+  opacity: 0px;
+  background-color: #9B9B9B ;
+}
+
+.pie-chart-container {
+  width: 355.41px;
+  height: 181px;
+  border-radius: 15px;
+  opacity: 0px;
+ 
+}
+
+.wallet-info,
+.expense-info {
+  border: 1px solid #ccc;
+  margin-right: 20px; /* Add margin between sections */
+}
+
+.pie-chart-container {
+  margin-right: 0; /* Remove margin from the last container to avoid extra space */
+}
+
+button {
+  background-color: #2fff00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #b3b300;
+}
+
+
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recent-transactions-container{
+
+  width: 738.33px;
+  height: 345.03px;
+  border-radius: 15px;
+  opacity: 0px;
+  background-color: #FFFFFF;
+
+}
+
+.top-expenses-container{
+  width: 417px;
+  height: 345px;
+  border-radius: 15px;
+  opacity: 0px;
+  background-color: #FFFFFF;
+}
+
+.expense-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+  .wallet-info, .expense-info, .pie-chart-container, .recent-transactions-container, .top-expenses-container {
+    width: 100%;
+  }
+}
