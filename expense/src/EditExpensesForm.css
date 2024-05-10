@@ -1,0 +1,75 @@
+#editExpensesForm {
+    position: absolute;
+    width: 538px;
+    height: 335px;
+    top: 259px;
+    left: 371px;
+    gap: 0px;
+    border-radius: 15px;
+    opacity: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #editExpensesForm h2 {
+    margin-bottom: 20px;
+    /* text-align: left; */
+  }
+  
+  #editExpensesForm form div {
+    margin-bottom: 15px;
+  }
+  
+  #editExpensesForm form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+   
+  #editExpensesForm form input {
+    /* width: calc(50% - 5px);  */
+    width: 223px;
+    Height :41px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+ 
+  #editExpensesForm form .row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  #editExpensesForm form .row div {
+    flex: 1;
+  }
+
+
+  .button-container {
+    display: flex;
+    gap: 10px; /* Adjust the gap between buttons as needed */
+  }
+  
+  .button-container button {
+    width: 50%; /* Adjust button width */
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .button-container button:first-child {
+    background-color: #F4BB4A; 
+  }
+  
+  .button-container button:last-child {
+    background-color:#E3E3E3;
+  }
+  
+  .button-container button:hover {
+    opacity: 0.8;
+  }
+  

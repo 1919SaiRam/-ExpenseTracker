@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './AddExpenseForm.css'; // Import the CSS file
+import './EditExpensesForm.css';  
 
-const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
+const EditExpensesForm = ({ editExpense ,  setShowEditExpenseForm }) => {
   const [formData, setFormData] = useState({
     title: '',
     price: '',
@@ -18,19 +18,33 @@ const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
     });
   };
 
-  const handleSubmit = (e) => {
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
+//     if (validateForm()) {
+//         editExpense(formData);
+//       setFormData({
+//         title: '',
+//         price: '',
+//         category: '',
+//         dob: ''
+//       });
+//       setShowEditExpenseForm(false) ; //to hide add expense 
+//     }
+//   };
+const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      addExpense(formData);
+      editExpense(formData);
       setFormData({
         title: '',
         price: '',
         category: '',
         dob: ''
       });
-      setShowAddExpenseForm(false) ; //to hide add expense 
+      setShowEditExpenseForm(false); // to hide add expense
     }
   };
+  
 
   const handleCancel = () => {
     setFormData({
@@ -39,7 +53,7 @@ const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
       category: '',
       dob: ''
     });
-    setShowAddExpenseForm(false) ; //to hide by  click cancel 
+    setShowEditExpenseForm(false) ; //to hide by  click cancel 
   };
 
   const validateForm = () => {
@@ -71,10 +85,10 @@ const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
   };
 
   return (
-    <div id="addExpensesForm">
-      <h2>Add Expense</h2>
+    <div id="editExpensesForm">
+      <h2>Edit Expense</h2>
       <form onSubmit={handleSubmit}>
-      <div  class = "detailsofexpense-info">
+      <div  class = "detailsofexpenses-info">
         <div>
           <label htmlFor="title"></label>
           <input type="text" id="title" name="title" value={formData.title} onChange={handleChange} placeholder="Title" required />
@@ -112,4 +126,4 @@ const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
   );
 };
 
-export default AddExpenseForm;
+export default EditExpensesForm;

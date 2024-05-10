@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import PieChartWithCustomizedLabel from './PieChartWithCustomizedLabel';
-import AddExpenseForm from './AddExpenseForm'; 
+import AddExpenseForm from './AddExpenseForm';
+import AddIncomeForm from './AddIncomeForm'; // Import AddIncomeForm
 
 const App = () => {
   const [walletBalance, setWalletBalance] = useState(4500);
   const [expenses, setExpenses] = useState([]);
   const [totalExpenses, setTotalExpenses] = useState(500);
-  const [showAddExpenseForm, setShowAddExpenseForm] = useState(false); // Add state for showing form
+  const [showAddExpenseForm, setShowAddExpenseForm] = useState(false);
+  const [showIncomeForm, setShowIncomeForm] = useState(false); // Corrected variable name
 
   useEffect(() => {
-    // Load expenses from localStorage on component mount
     const savedExpenses = JSON.parse(localStorage.getItem('expenses')) || [];
     if (savedExpenses.length > 0) {
       setExpenses(savedExpenses);
@@ -26,7 +27,6 @@ const App = () => {
   }, []);
 
   useEffect(() => {
-    // Update localStorage when expenses state changes
     localStorage.setItem('expenses', JSON.stringify(expenses));
     const total = expenses.reduce((acc, expense) => {
       if (expense && typeof expense.amount === 'number') {
@@ -41,7 +41,7 @@ const App = () => {
   const addExpense = (expense) => {
     setExpenses([...expenses, expense]);
     setWalletBalance(walletBalance - expense.amount);
-    setShowAddExpenseForm(false); // Hide form after adding expense
+    setShowAddExpenseForm(false);
   };
 
   const addIncome = (income) => {
@@ -64,15 +64,17 @@ const App = () => {
         <div className="info-container">
           <div className="wallet-info">
             <p>Wallet Balance: ₹{walletBalance}</p>
-            <button onClick={() => addIncome(1000)}>+ Add Income</button>
+            <button onClick={() => setShowIncomeForm(true)}>+ Add Income</button>
+            {/* {showIncomeForm && <AddIncomeForm addIncome={addIncome} />} */}
+            {showIncomeForm && <AddIncomeForm addIncome={addIncome} setShowAddIncomeForm={setShowIncomeForm} />} {/* Render income form conditionally */}
           </div>
           <div className="expense-info">
             <p>Expenses: ₹{totalExpenses}</p>
-            <button onClick={() => setShowAddExpenseForm(true)}>+ Add Expense</button> {/* Button to show form */}
-            {showAddExpenseForm && <AddExpenseForm addExpense={addExpense} />} {/* Render form conditionally */}
+            <button onClick={() => setShowAddExpenseForm(true)}>+ Add Expense</button>
+            {/* {showAddExpenseForm && <AddExpenseForm addExpense={addExpense} />} */}
+            {showAddExpenseForm && <AddExpenseForm addExpense={addExpense} setShowAddExpenseForm={setShowAddExpenseForm} />} {/* Render expense form conditionally */}
           </div>
           <div className="pie-chart-container">
-            {/* Placeholder for PieChartWithCustomizedLabel component */}
             <p>PieChartWithCustomizedLabel</p>
             <PieChartWithCustomizedLabel />
             <div className="chart-labels">
@@ -84,7 +86,6 @@ const App = () => {
         </div>
 
         <div className="recent-transactions-container">
-          {/* Placeholder for RecentTransactions component */}
           <p>RecentTransactions</p>
           <div className="transaction">
             <p>Samosa</p>
@@ -102,19 +103,28 @@ const App = () => {
             <p>March 22, 2024</p>
           </div>
         </div>
-        <div className="top-expenses-container">
-          {/* Placeholder for TopExpenses component */}
+        {/* <div className="top-expenses-container">
           <p>TopExpenses</p>
-          <div className="bar-chart">
-            {/* Placeholder for bar chart */}
-          </div>
+          <div className="bar-chart"></div>
           <div className="expense-labels">
             <p>Entertainment</p>
             <p>Food</p>
             <p>Travel</p>
           </div>
-        </div>
-        
+        </div> */}
+        <div className="top-expenses-container">
+          <p>Top Expenses</p>
+              <div className="bar-chart">
+                 <div className="expense-bar food" style={{ width: `${(totalExpenses / walletBalance) * 100}%` }}></div>
+                 <div className="expense-bar entertainment" style={{ width: `${(totalExpenses / walletBalance) * 100}%` }}></div>
+                 <div className="expense-bar travel" style={{ width: `${(totalExpenses / walletBalance) * 100}%` }}></div>
+              </div>
+        <div className="expense-labels">
+         <p>Food</p>
+         <p>Entertainment</p>
+         <p>Travel</p>
+           </div>
+         </div>
       </section>
     </div>
   );

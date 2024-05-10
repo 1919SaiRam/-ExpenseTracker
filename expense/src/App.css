@@ -11,6 +11,7 @@
   opacity: 0px;
   position: relative;
   margin: 0 auto; 
+  /* margin : 50px 20px 20px 50px  ; */
   border: 5px solid black;
 
 }
@@ -20,10 +21,11 @@ header {
   color: #fff;
   padding: 20px 0;
   position: relative;
-  top: 26px;
-  left: 125px;
+  top: 30px;
+  left: 12px;
   width: 1256px;
   height: 750px;
+  /* margin: 0 auto;  */
   /*width: 1256px;
 height: 781px;
 top: 36px;
@@ -43,26 +45,28 @@ opacity: 0px; */
   flex-wrap: wrap;
   justify-content: space-around;
   background-color:  #9B9B9B;
-  margin-top: 20px;
+  margin: 30px 80px 15px 5px ;
   position: absolute;
   Width :1200px ;
   Height :650px ;
   Border:1px ;
-  top:53%;
-  left:59%;
+  /* top:60%;
+  left:59%; */
+  top : 440.97px ;
+  left: 850px ;
   transform: translate(-50%, -50%);
 }
 
 .dots {
   position: absolute;
-  top: 10px;
-  left: 25px;
+  top: 20px;
+  left: 45px;
   transform: translate(-50%, -50%);
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   display: inline-block;
   margin-left: 5px;
@@ -171,10 +175,45 @@ button:hover {
   background-color: #FFFFFF;
 }
 
+.bar-chart {
+  /* width: 100%; */
+  width: 50px ;
+  margin-bottom: 10px;
+}
+
+.expense-bar {
+  width: 10px; /* Initially set width to 0 */
+  height: 30px; /* Adjust height as needed */
+  background-color: #3B3B3B; /* Set the background color */
+  margin-bottom: 5px; /* Add margin between bars */
+  border-radius: 5px; /* Add border radius */
+  transition: width 0.5s ease; /*Add transition effect*/
+}
+
+.expense-bar p {
+  margin: 0;
+  color: white; /* Text color */
+  padding: 5px; /* Add padding to center the text vertically */
+}
+
+.food {
+  background-color: blue; /* Set color for food expenses */
+}
+
+.entertainment {
+  background-color: orange; /* Set color for entertainment expenses */
+}
+
+.travel {
+  background-color: yellow; /* Set color for travel expenses */
+}
+
+
 .expense-labels {
   display: flex;
   justify-content: space-between;
 }
+
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
