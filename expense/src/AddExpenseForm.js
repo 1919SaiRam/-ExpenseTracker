@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './AddExpenseForm.css'; // Import the CSS file
+import './AddExpenseForm.css';
 
-const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
+const AddExpenseForm = ({ addExpense, setShowAddExpenseForm, isEdit }) => {
   const [formData, setFormData] = useState({
     title: '',
     price: '',
@@ -21,14 +21,14 @@ const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      addExpense(formData);
+      addExpense({ ...formData, amount: parseFloat(formData.price) });
       setFormData({
         title: '',
         price: '',
         category: '',
         dob: ''
       });
-      setShowAddExpenseForm(false) ; //to hide add expense 
+      setShowAddExpenseForm(false);
     }
   };
 
@@ -39,7 +39,7 @@ const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
       category: '',
       dob: ''
     });
-    setShowAddExpenseForm(false) ; //to hide by  click cancel 
+    setShowAddExpenseForm(false);
   };
 
   const validateForm = () => {
@@ -53,6 +53,9 @@ const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
 
     if (!formData.price) {
       errors.price = "Price is required";
+      isValid = false;
+    } else if (isNaN(formData.price) || formData.price <= 0) {
+      errors.price = "Price should be a positive number";
       isValid = false;
     }
 
@@ -72,39 +75,32 @@ const AddExpenseForm = ({ addExpense ,  setShowAddExpenseForm }) => {
 
   return (
     <div id="addExpensesForm">
-      <h2>Add Expense</h2>
+      <h2>{isEdit ? 'Edit Expenses' : 'Add Expenses'}</h2>
       <form onSubmit={handleSubmit}>
-      <div  class = "detailsofexpense-info">
-        <div>
-          <label htmlFor="title"></label>
-          <input type="text" id="title" name="title" value={formData.title} onChange={handleChange} placeholder="Title" required />
-          {errors.title && <p id="error">{errors.title}</p>}
+        <div className="detailsofexpense-info">
+          <div>
+            <label htmlFor="title"></label>
+            <input type="text" id="title" name="title" value={formData.title} onChange={handleChange} placeholder="Title" required />
+            {errors.title && <p id="error">{errors.title}</p>}
+          </div>
+          <div>
+            <label htmlFor="price"></label>
+            <input type="number" id="price" name="price" value={formData.price} onChange={handleChange} placeholder="Price" required />
+            {errors.price && <p id="error">{errors.price}</p>}
+          </div>
+          <div>
+            <label htmlFor="category"></label>
+            <input type="text" id="category" name="category" value={formData.category} onChange={handleChange} placeholder="Category" required />
+            {errors.category && <p id="error">{errors.category}</p>}
+          </div>
+          <div>
+            <label htmlFor="dob"></label>
+            <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" value={formData.dob} onChange={handleChange} placeholder="dd/mm/yyyy" required />
+            {errors.dob && <p id="error">{errors.dob}</p>}
+          </div>
         </div>
-        <div>
-          <label htmlFor="price"></label>
-          <input type="number" id="price" name="price" value={formData.price} onChange={handleChange} placeholder="Price" required />
-          {errors.price && <p id="error">{errors.price}</p>}
-        </div>
-        <div>
-          <label htmlFor="category"></label>
-          {/* <select id="category" name="category" value={formData.category} onChange={handleChange} placeholder="Category" required > */}
-            {/* <option value=""></option>
-            <option value="Food">Food</option>
-            <option value="Transport">Transport</option>
-            <option value="Entertainment">Entertainment</option>
-            <option value="Utilities">Utilities</option> */}
-          {/* </select> */}
-          <input type="text" id="category" name="category" value={formData.category} onChange={handleChange} placeholder="Category" required />
-          {errors.category && <p id="error">{errors.category}</p>}
-        </div>
-        <div>
-          <label htmlFor="dob"></label>
-          <input type="text" id="dob" name="dob" pattern="\d{2}/\d{2}/\d{4}" value={formData.dob} onChange={handleChange} placeholder="dd/mm/yyyy" required />
-          {errors.dob && <p id="error">{errors.dob}</p>}
-        </div>
-      </div>
         <div className="button-container">
-          <button type="submit">Add Expense</button>
+          <button type="submit">{isEdit ? 'Add Expense' : 'Add Expense'}</button>
           <button type="button" onClick={handleCancel}>Cancel</button>
         </div>
       </form>

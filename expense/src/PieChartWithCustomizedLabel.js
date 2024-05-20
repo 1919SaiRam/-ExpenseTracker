@@ -2,12 +2,12 @@ import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'Entertainment', value: 70 },
-  { name: 'Food', value: 10 },
-  { name: 'Travel', value: 30 },
+  { name: 'Entertainment', value: 70 }, 
+  { name: 'Food', value: 30 },          
+  { name: 'Travel', value: 10 },        
 ];
 
-const COLORS = ['#FFA500', '#0000FF', '#FFFF00']; // Orange, Blue, Yellow
+const COLORS = ['#FF9304', '#A000FF', '#FDE006'];
 
 const RADIAN = Math.PI / 180;
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {

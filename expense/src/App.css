@@ -1,19 +1,15 @@
-.App {
+ .App {
   text-align: center;
 }
 
 .header-container { 
   width: 1280px;
   height: 832px;
-  /* top: -416px;
-  left: -1960px; */
   gap: 0px;
   opacity: 0px;
   position: relative;
   margin: 0 auto; 
-  /* margin : 50px 20px 20px 50px  ; */
   border: 5px solid black;
-
 }
 
 header {
@@ -25,35 +21,23 @@ header {
   left: 12px;
   width: 1256px;
   height: 750px;
-  /* margin: 0 auto;  */
-  /*width: 1256px;
-height: 781px;
-top: 36px;
-left: 12px;
-gap: 0px;
-border: 1px 0px 0px 0px;
-opacity: 0px; */
-
   text-align: left;
-  border: 1px solid #fff; /* White border on all four sides */
-  /* border-radius: 20px;  */
+  border: 1px solid #fff;
+  border-radius: 20px;
 }
-
 
 .main-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color:  #9B9B9B;
-  margin: 30px 80px 15px 5px ;
+  background-color: #3B3B3B;
+  margin: 30px 80px 15px 5px;
   position: absolute;
-  Width :1200px ;
-  Height :650px ;
-  Border:1px ;
-  /* top:60%;
-  left:59%; */
-  top : 440.97px ;
-  left: 850px ;
+  width: 1211px;
+  height: 670px;
+  border: 1px;
+  top: 440.97px;
+  left: 850px;
   transform: translate(-50%, -50%);
 }
 
@@ -72,19 +56,17 @@ opacity: 0px; */
   margin-left: 5px;
 }
 
-
-.red{
-  background-color: red;
+.red {
+  background-color: #CC2323;
 }
 
 .orange {
-  background-color: orange;
+  background-color: #F4BB4A;
 }
 
 .green {
-  background-color: green;
+  background-color: #48A14D;
 }
-
 
 .info-container {
   display: flex;
@@ -95,10 +77,25 @@ opacity: 0px; */
   left: 32px;
   gap: 0px;
   border: 1px solid #ccc;
-  border-radius: 10px ;
+  border-radius: 10px;
   opacity: 0px;
-  background-color: #626262 ;
-  padding: 10px; /* Add padding to create space between border and inner elements */
+  background-color: #626262;
+  padding: 10px;
+  margin: -10px;
+}
+
+.summary-container {
+  display: flex;
+  justify-content: space-between;
+  width: 1300px;
+  height: 345px;
+  top: 260px;
+  left: 32px;
+  gap: 0px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  opacity: 0px;
+  background-color: #626262;
 }
 
 .wallet-info {
@@ -107,15 +104,27 @@ opacity: 0px; */
   border-radius: 15px;
   opacity: 0px;
   top: 140;
-  background-color: #9B9B9B ;
+  background-color: #9B9B9B;
+  margin: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
-.expense-info{
+.expense-info {
   width: 355.41px;
   height: 181px;
   border-radius: 15px;
   opacity: 0px;
-  background-color: #9B9B9B ;
+  background-color: #9B9B9B;
+  margin: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
 
 .pie-chart-container {
@@ -123,51 +132,75 @@ opacity: 0px; */
   height: 181px;
   border-radius: 15px;
   opacity: 0px;
- 
 }
 
 .wallet-info,
 .expense-info {
   border: 1px solid #ccc;
-  margin-right: 20px; /* Add margin between sections */
+  margin-right: 20px;
 }
 
 .pie-chart-container {
-  margin-right: 0; /* Remove margin from the last container to avoid extra space */
+  margin-right: 0;
 }
 
 button {
-  background-color: #2fff00;
-  color: #fff;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  width: 167px;
+  border-radius: 15px;
   cursor: pointer;
   margin-top: 10px;
 }
 
-button:hover {
-  background-color: #b3b300;
+.add-income-button {
+  background: linear-gradient(to right, #B5DC52, #89E148);
+  color: #fff;
 }
 
+.add-expense-button {
+  background: linear-gradient(to right, #FF9595, #FF4747, #FF3838);
+  color: #fff;
+}
 
+button:hover {
+  background-color: burlywood;
+}
 
 .chart-labels {
   display: flex;
   justify-content: space-between;
 }
 
-.recent-transactions-container{
-
+.recent-transactions-container {
   width: 738.33px;
-  height: 345.03px;
+  height: 345px;
   border-radius: 15px;
   opacity: 0px;
   background-color: #FFFFFF;
-
 }
 
-.top-expenses-container{
+.transaction {
+  border-bottom: 1px solid #9B9B9B;
+  margin-top: 0px;
+}
+
+.transaction {
+  display: flex;
+  justify-content: space-between;
+}
+
+.transaction-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-right {
+  text-align: right;
+}
+
+
+.top-expenses-container {
   width: 417px;
   height: 345px;
   border-radius: 15px;
@@ -176,46 +209,86 @@ button:hover {
 }
 
 .bar-chart {
-  /* width: 100%; */
-  width: 50px ;
+  width: 100%;
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .expense-bar {
-  width: 10px; /* Initially set width to 0 */
-  height: 30px; /* Adjust height as needed */
-  background-color: #3B3B3B; /* Set the background color */
-  margin-bottom: 5px; /* Add margin between bars */
-  border-radius: 5px; /* Add border radius */
-  transition: width 0.5s ease; /*Add transition effect*/
+  height: 30px;
+  background-color: #3B3B3B;
+  margin-bottom: 5px;
+  border-radius: 0px , 20px , 20px , 0px ;
+  transition: width 0.5s ease;
 }
 
 .expense-bar p {
-  margin: 0;
-  color: white; /* Text color */
-  padding: 5px; /* Add padding to center the text vertically */
+  margin: 0px;
+  color: white;
 }
-
-.food {
-  background-color: blue; /* Set color for food expenses */
-}
-
-.entertainment {
-  background-color: orange; /* Set color for entertainment expenses */
-}
-
-.travel {
-  background-color: yellow; /* Set color for travel expenses */
-}
-
 
 .expense-labels {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 0px;
+   position: relative;
+  left: 5px; 
+}
+
+.expense-labels p {
+  margin: 10px;
+}
+
+.entertainment {
+  background-color:  #8784D2;
+  margin-left: 120px;
 }
 
 
-/* Media queries for responsiveness */
+.food {
+  background-color: #8784D2;
+  margin-top: 50px;
+  margin-left: 120px;
+}
+
+.travel {
+  background-color: #8784D2;
+  margin-left: 120px;
+  margin-top: 50px;
+}
+
+.small-boxfood {
+  width: 26px;
+  height: 8px;
+  background-color: #A000FF; 
+  display: inline-block;
+  margin-right: 5px; 
+}
+
+.small-boxentertain {
+  width: 26px;
+  height: 8px;
+  background-color: #FF9304; 
+  display: inline-block;
+  margin-right: 5px; 
+}
+
+.small-boxtravel {
+  width: 26px;
+  height: 8px;
+  background-color: #FDE006; 
+  display: inline-block;
+  margin-right: 5px; 
+}
+
+.wallet-info h1:first-child,
+.expense-info h1:first-child {
+  color: white;
+}
+
 @media only screen and (max-width: 768px) {
   .wallet-info, .expense-info, .pie-chart-container, .recent-transactions-container, .top-expenses-container {
     width: 100%;
