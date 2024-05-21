@@ -130,6 +130,20 @@ const App = () => {
                 <p>₹50</p>
               </div>
               </div>
+
+              <div className="button-container">
+            <button className="arrow-buttonleft" >
+              <i className="fas fa-chevron-left"></i>
+            </button>
+            <button className="arrow-button" >
+                 1
+            </button>
+            <button className="arrow-buttonright" >
+               <i className="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+
         </div>
 
             <div className="top-expenses-container">

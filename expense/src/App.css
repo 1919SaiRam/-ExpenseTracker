@@ -348,6 +348,70 @@ text-align: left;
   margin-right: 5px; 
 }
 
+
+/* Button container */
+.button-container {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Button styles */
+.button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 5px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+.arrow-button {
+  width: 35px;
+  height: 30px;
+  border: none;
+  background-color:  #43967B;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.arrow-buttonleft {
+  width: 35px;
+  height: 30px;
+  border: none;
+  background-color: #F1F1F1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.arrow-buttonright {
+  width: 35px;
+  height: 30px;
+  border: none;
+  background-color: #F1F1F1;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.arrow-button:hover {
+  color: #999; 
+}
+
+.center-button {
+  width: 25px;
+}
+
+
 .wallet-info h1:first-child,
 .expense-info h1:first-child {
   color: white;
