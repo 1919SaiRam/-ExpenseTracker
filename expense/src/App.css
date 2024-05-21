@@ -1,4 +1,4 @@
- .App {
+.App {
   text-align: center;
 }
 
@@ -14,14 +14,13 @@
 
 header {
   background-color: #3B3B3B;
-  /* color: #fff; */
+ 
   padding: 20px 0;
   position: relative;
   top: 30px;
   left: 12px;
   width: 1256px;
   height: 750px;
-  /* text-align: left; */
   border: 1px solid #fff;
   border-radius: 20px;
 }
@@ -79,7 +78,6 @@ header h1 {
   display: flex;
   justify-content: space-between;
   width: 1300px;
-  /* height: 269px; */
   height: 250px;
   top: 250px;
   left: 32px;
@@ -185,7 +183,6 @@ button:hover {
 .recent-transactions-container {
   width: 738.33px;
   height: 345px;
-  /* height: 370px; */
   border-radius: 15px;
   opacity: 0px;
   background-color: #FFFFFF;
@@ -268,10 +265,6 @@ text-align: left;
   height: 37px;
   background-color: #ccc; 
   border-radius: 50%; 
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* margin-top: 50px;  */
   font-size: 24px;
   position: absolute; 
   top: 5px; 
@@ -284,10 +277,6 @@ text-align: left;
     height: 37px;
     background-color: #ccc; 
     border-radius: 50%; 
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    /* margin-top: 50px;  */
     font-size: 24px;
     position: absolute; 
     top: 5px; 
@@ -383,7 +372,7 @@ text-align: left;
 }
 
 
-/* Button container */
+
 .button-container {
   width: 150px;
   height: 40px;
@@ -395,7 +384,6 @@ text-align: left;
   transform: translateX(-50%);
 }
 
-/* Button styles */
 .button {
   width: 35px;
   height: 35px;
@@ -450,8 +438,55 @@ text-align: left;
   color: white;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   .wallet-info, .expense-info, .pie-chart-container, .recent-transactions-container, .top-expenses-container {
     width: 100%;
+  }
+}  */
+
+
+/* For Tablets and Larger Screens */
+@media (max-width: 1024px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wallet-info, .expense-info, .pie-chart-container, .recent-transactions-container, .top-expenses-container {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 10px;
+  }
+
+  .wallet-info, .expense-info, .pie-chart-container, .recent-transactions-container, .top-expenses-container {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+
+  .recent-transactions-container h2, .top-expenses-container h2 {
+    font-size: 20px;
+  }
+
+  .transaction {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .transaction-left, .transaction-right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .transaction-right p {
+    margin-right: 0; /* Corrected line */
   }
 }
