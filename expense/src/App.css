@@ -247,11 +247,12 @@ text-align: left;
 }
 
 
+
 .transaction-left p {
   margin: 0;
   position: relative;
   margin-left: 10px;
-  margin-top: -2px;
+  margin-top: -1px;
 }
 
 .transaction-right {
@@ -259,6 +260,39 @@ text-align: left;
   right: 150px;
   top: 20px;
 }
+
+
+
+.sym {
+  width: 37px;
+  height: 37px;
+  background-color: #ccc; 
+  border-radius: 50%; 
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* margin-top: 50px;  */
+  font-size: 24px;
+  position: absolute; 
+  top: 5px; 
+  right: -60px;
+}
+
+
+  .symb {
+    width: 37px;
+    height: 37px;
+    background-color: #ccc; 
+    border-radius: 50%; 
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* margin-top: 50px;  */
+    font-size: 24px;
+    position: absolute; 
+    top: 5px; 
+    right: -100px;
+  }
 
 
 .top-expenses-container {
@@ -410,7 +444,6 @@ text-align: left;
 .center-button {
   width: 25px;
 }
-
 
 .wallet-info h1:first-child,
 .expense-info h1:first-child {

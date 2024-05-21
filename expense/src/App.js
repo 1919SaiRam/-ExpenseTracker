@@ -102,10 +102,12 @@ const App = () => {
             <div className="transaction-left">
             <div class="symbol">⚡</div>
                <p>Samosa</p>
-               <p>March 20, 2024</p>
+               <p  style={{ color: '#9B9B9B' }} >March 20, 2024</p>
             </div>
             <div className="transaction-right">
                <p>₹150</p>
+               <div class="sym">❌</div>
+               <div class="symb">✏️</div>
             </div>
           </div>
 
@@ -113,10 +115,12 @@ const App = () => {
              <div className="transaction-left">
              <div class="symbol">🎁</div>
                 <p>Movie</p>
-                <p>March 21, 2024</p>
+                <p style={{ color: '#9B9B9B' }}>March 21, 2024</p>
               </div>
              <div className="transaction-right">
                  <p>₹300</p>
+                 <div class="sym">❌</div>
+                 <div class="symb">✏️</div>
              </div>
           </div>
 
@@ -124,10 +128,12 @@ const App = () => {
               <div className="transaction-left">
               <div class="symbol">🚗</div>
                  <p>Auto</p>
-                 <p>March 22, 2024</p>
+                 <p  style={{ color: '#9B9B9B' }} >March 22, 2024</p>
               </div>
               <div className="transaction-right">
                 <p>₹50</p>
+                <div class="sym">❌</div>
+                <div class="symb">✏️</div>
               </div>
               </div>
 
