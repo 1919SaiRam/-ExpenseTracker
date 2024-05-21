@@ -438,11 +438,9 @@ text-align: left;
   color: white;
 }
 
-/* @media only screen and (max-width: 768px) {
-  .wallet-info, .expense-info, .pie-chart-container, .recent-transactions-container, .top-expenses-container {
-    width: 100%;
-  }
-}  */
+
+
+
 
 
 /* For Tablets and Larger Screens */

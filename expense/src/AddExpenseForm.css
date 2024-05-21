@@ -1,4 +1,4 @@
-#addExpensesForm {
+/* #addExpensesForm {
     position: absolute;
     width: 538px;
     height: 335px;
@@ -10,7 +10,23 @@
     background-color: #f0f0f0;
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
+  } */
+
+  #addExpensesForm {
+    position: absolute;
+    width: 538px;
+    height: 335px;
+    top: -30px; /* Changed from 259px to 0px */
+    left: 50%; /* Adjust the horizontal centering */
+    transform: translateX(-50%); /* Adjust the horizontal centering */
+    gap: 0px;
+    border-radius: 15px;
+    opacity: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
   
   #addExpensesForm h2 {
     margin-bottom: 20px;
@@ -35,10 +51,6 @@
     border-radius: 5px;
     box-sizing: border-box;
   }
-
-  /* #addExpensesForm form select{
-
-  } */
   
   #addExpensesForm form .row {
     display: flex;
@@ -51,13 +63,13 @@
   }
 
 
-  .button-container {
+  .button-containerform {
     display: flex;
     gap: 10px; /* Adjust the gap between buttons as needed */
   }
   
-  .button-container button {
-    width: 50%; /* Adjust button width */
+  .button-containerform button {
+    width: 50%; 
     padding: 10px;
     border: none;
     border-radius: 10px;
@@ -65,15 +77,17 @@
     cursor: pointer;
   }
   
-  .button-container button:first-child {
+  .button-containerform button:first-child {
     background-color: #F4BB4A; 
+    width: 300px;
+    height: 50px;
   }
   
-  .button-container button:last-child {
+  .button-containerform button:last-child {
     background-color:#e3e3e3;
   }
   
-  .button-container button:hover {
+  .button-containerform button:hover {
     opacity: 0.8;
   }
   

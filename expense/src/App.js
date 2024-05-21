@@ -10,6 +10,7 @@ const App = () => {
   const [totalExpenses, setTotalExpenses] = useState(500);
   const [showAddExpenseForm, setShowAddExpenseForm] = useState(false);
   const [showIncomeForm, setShowIncomeForm] = useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
 
   const data = [
     { name: 'Entertainment', value: 70 }, // 70%
@@ -48,6 +49,7 @@ const App = () => {
     setExpenses([...expenses, expense]);
     setWalletBalance(walletBalance - expense.amount);
     setShowAddExpenseForm(false);
+    setIsEditMode(true); 
   };
 
   const addIncome = (income) => {
@@ -76,7 +78,13 @@ const App = () => {
           <div className="expense-info">
             <h2>Expenses:<span style={{ color: '#F4BB4A' }}>₹{totalExpenses}</span> </h2>
             <button className="add-expense-button" onClick={() => setShowAddExpenseForm(true)}>Add Expense</button>
-            {showAddExpenseForm && <AddExpenseForm addExpense={addExpense} setShowAddExpenseForm={setShowAddExpenseForm} />}
+            {showAddExpenseForm && (
+              <AddExpenseForm
+                addExpense={addExpense}
+                setShowAddExpenseForm={setShowAddExpenseForm}
+                isEdit={isEditMode}
+              />
+            )}
           </div>
 
           <div className="pie-chart-container">

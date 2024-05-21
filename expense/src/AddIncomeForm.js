@@ -48,7 +48,7 @@ const AddIncomeForm = ({ addIncome , setShowAddIncomeForm  }) => { // Corrected 
 
   return (
     <div id="addIncomeForm">
-      <h2>Add Balance</h2>
+      <h2 style={{ color: '#000000' }} >Add Balance</h2>
       <form onSubmit={handleSubmit}>
         <div className="detailsofincome-info"> {/* Added className for styling */}
           <div>
@@ -57,7 +57,7 @@ const AddIncomeForm = ({ addIncome , setShowAddIncomeForm  }) => { // Corrected 
             {errors.income && <p id="error">{errors.income}</p>}
           </div>
         </div>
-        <div className="button-container"> {/* Added className for styling */}
+        <div className="button-containerform"> {/* Added className for styling */}
           <button type="submit">Add Income</button>
           <button type="button" onClick={handleCancel}>Cancel</button>
         </div>
