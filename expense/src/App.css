@@ -14,16 +14,23 @@
 
 header {
   background-color: #3B3B3B;
-  color: #fff;
+  /* color: #fff; */
   padding: 20px 0;
   position: relative;
   top: 30px;
   left: 12px;
   width: 1256px;
   height: 750px;
-  text-align: left;
+  /* text-align: left; */
   border: 1px solid #fff;
   border-radius: 20px;
+}
+
+header h1 {
+  color: #fff;
+  text-align: left;
+  margin-top: 1px;
+  margin-left: 20px;
 }
 
 .main-container {
@@ -31,13 +38,13 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: #3B3B3B;
-  margin: 30px 80px 15px 5px;
+  margin: 20px 80px 15px 5px;
   position: absolute;
   width: 1211px;
   height: 670px;
   border: 1px;
-  top: 440.97px;
-  left: 850px;
+  top: 430px;
+  left: 840px;
   transform: translate(-50%, -50%);
 }
 
@@ -72,7 +79,8 @@ header {
   display: flex;
   justify-content: space-between;
   width: 1300px;
-  height: 269px;
+  /* height: 269px; */
+  height: 250px;
   top: 250px;
   left: 32px;
   gap: 0px;
@@ -91,6 +99,7 @@ header {
   height: 345px;
   top: 260px;
   left: 32px;
+  margin-top: 10px;
   gap: 0px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -125,6 +134,7 @@ header {
   justify-content: center;
   align-items: center;
   color: #fff;
+  font-weight: 400px;
 }
 
 .pie-chart-container {
@@ -234,17 +244,20 @@ button:hover {
   justify-content: space-between;
   align-items: flex-start;
   padding-top: 0px;
-   position: relative;
+  position: relative;
   left: 5px; 
 }
 
 .expense-labels p {
-  margin: 10px;
+  margin: 30px;
 }
+
+
 
 .entertainment {
   background-color:  #8784D2;
   margin-left: 120px;
+  margin-top: 30px ;
 }
 
 

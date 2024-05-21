@@ -97,7 +97,7 @@ const App = () => {
         </div>
 
         <div className="recent-transactions-container">
-          <h2>Recent Transactions</h2> 
+          {/* <h2>Recent Transactions</h2>  */}
           <div className="transaction">
             <div className="transaction-left">
                <p>Samosa</p>
@@ -130,7 +130,7 @@ const App = () => {
         </div>
 
          <div className="top-expenses-container">
-            <h2>Top Expenses</h2>
+            {/* <h2>Top Expenses</h2> */}
             <div className="bar-chart">
               {data.map((expense, index) => (
                 <div
@@ -141,7 +141,7 @@ const App = () => {
               ))}
             </div>
             <div className="expense-labels">
-              <p>Entertainment</p>
+              <p className='en'>Entertainment</p>
               <p>Food</p>
               <p>Travel</p>
             </div>
