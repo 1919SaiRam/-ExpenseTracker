@@ -97,9 +97,10 @@ const App = () => {
         </div>
 
         <div className="recent-transactions-container">
-          {/* <h2>Recent Transactions</h2>  */}
+          <h2>Recent Transactions</h2> 
           <div className="transaction">
             <div className="transaction-left">
+            <div class="symbol">⚡</div>
                <p>Samosa</p>
                <p>March 20, 2024</p>
             </div>
@@ -110,6 +111,7 @@ const App = () => {
 
           <div className="transaction">
              <div className="transaction-left">
+             <div class="symbol">🎁</div>
                 <p>Movie</p>
                 <p>March 21, 2024</p>
               </div>
@@ -120,6 +122,7 @@ const App = () => {
 
           <div className="transaction">
               <div className="transaction-left">
+              <div class="symbol">🚗</div>
                  <p>Auto</p>
                  <p>March 22, 2024</p>
               </div>
@@ -129,24 +132,22 @@ const App = () => {
               </div>
         </div>
 
-         <div className="top-expenses-container">
-            {/* <h2>Top Expenses</h2> */}
-            <div className="bar-chart">
-              {data.map((expense, index) => (
-                <div
-                  key={index}
-                  className={`expense-bar ${expense.name.toLowerCase()}`}
-                  style={{ width: `${expense.value}%` }}
-                ></div>
-              ))}
+            <div className="top-expenses-container">
+                <h2>Top Expenses</h2>
+              <div className="bar-chart">
+                    {data.map((expense, index) => (
+              <div
+                   key={index}
+                   className={`expense-bar ${expense.name.toLowerCase()}`}
+                   style={{ width: `${expense.value}%` }}
+               >
+             <div className="expense-labels">
+                      <p>{expense.name}</p>
+              </div>
             </div>
-            <div className="expense-labels">
-              <p className='en'>Entertainment</p>
-              <p>Food</p>
-              <p>Travel</p>
-            </div>
+                ))}
+             </div>
           </div>
-
 
       </section>
     </div>

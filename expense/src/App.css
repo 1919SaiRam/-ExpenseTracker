@@ -185,9 +185,32 @@ button:hover {
 .recent-transactions-container {
   width: 738.33px;
   height: 345px;
+  /* height: 370px; */
   border-radius: 15px;
   opacity: 0px;
   background-color: #FFFFFF;
+}
+
+
+.recent-transactions-container,
+.top-expenses-container {
+  position: relative;
+  top: 40px; 
+}
+
+.recent-transactions-container h2,
+.top-expenses-container h2 {
+  position: absolute;
+  top: -60px; 
+  left: -10px; 
+  color: #FFFFFF;
+  font-family: Ubuntu;
+font-size: 28px;
+font-style: italic;
+font-weight: 700;
+line-height: 32.17px;
+text-align: left;
+
 }
 
 .transaction {
@@ -198,15 +221,43 @@ button:hover {
 .transaction {
   display: flex;
   justify-content: space-between;
+  margin-top: 25px; 
 }
 
 .transaction-left {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  padding-left: 30px; 
+  align-items: center; 
+}
+
+
+.symbol {
+  width: 38px;
+  height: 38px;
+  background-color: #ccc; 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 150px; 
+  font-size: 24px;
+  position: relative; 
+  top: 30px; 
+}
+
+
+.transaction-left p {
+  margin: 0;
+  position: relative;
+  margin-left: 10px;
+  margin-top: -2px;
 }
 
 .transaction-right {
-  text-align: right;
+  position: relative;
+  right: 150px;
+  top: 20px;
 }
 
 
@@ -223,55 +274,55 @@ button:hover {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .expense-bar {
   height: 30px;
   background-color: #3B3B3B;
   margin-bottom: 5px;
-  border-radius: 0px , 20px , 20px , 0px ;
+  border-radius: 0px 20px 20px 0px;
   transition: width 0.5s ease;
-}
-
-.expense-bar p {
-  margin: 0px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
   color: white;
+  position: relative;
 }
 
 .expense-labels {
+  position: absolute;
+  left: -105px; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding-top: 0px;
-  position: relative;
-  left: 5px; 
+  justify-content: center;
+  height: 100%;
 }
 
 .expense-labels p {
-  margin: 30px;
+  margin: 0;
+  padding-left: 10px;
+  color: #000000;
 }
-
-
 
 .entertainment {
   background-color:  #8784D2;
-  margin-left: 120px;
-  margin-top: 30px ;
+  margin-left: 100px;
+  margin-top: 60px ;
 }
 
 
 .food {
   background-color: #8784D2;
   margin-top: 50px;
-  margin-left: 120px;
+  margin-left: 100px;
 }
 
 .travel {
   background-color: #8784D2;
-  margin-left: 120px;
+  margin-left: 100px;
   margin-top: 50px;
-}
+} 
 
 .small-boxfood {
   width: 26px;
